@@ -10,7 +10,10 @@ port=21
 terminator = 0
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(("192.168.0.9", port))
+# s.bind(("192.168.1.102", port))
+# s.bind(("192.168.43.71", port))
+s.bind(("localhost", port))
+
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 s.listen(5)
 print('Server Listening.......')
